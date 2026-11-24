@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İzmir Çocuk Dans ve Bale Akademisi (3-12 Yaş)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #F4F8FC;
+      --color-bg-card: #FFFFFF;
+      --color-text: #0B2545;
+      --color-muted: #244B77;
+      --color-izmir: #1363DF;
+      --color-izmir-hover: #064BB5;
+      --color-izmir-light: #E7F0FD;
+      --color-accent: #EE5959;
+      --color-accent-hover: #D43E3E;
+      --color-accent-light: #FDECEC;
+      --color-border: rgba(19, 99, 223, 0.18);
+      --radius-large: 24px;
+      --shadow-soft: 0 12px 32px rgba(11, 37, 69, 0.08);
+      --shadow-hover: 0 18px 40px rgba(19, 99, 223, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Nunito', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      color: var(--color-text);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    /* Üst Kurumsal Bilgi Çubuğu */
+    .top-banner {
+      background: linear-gradient(90deg, #0B2545, #1363DF);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+    }
+
+    .top-banner strong {
+      color: #FFE6E6;
+      background: rgba(238, 89, 89, 0.35);
+      padding: 2px 10px;
+      border-radius: var(--radius-large);
+      margin-right: 6px;
+    }
+
+    /* Gezinti Çubuğu */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 248, 252, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--color-border);
+      padding: 14px 24px;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-main {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--color-izmir);
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--color-text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 8px 16px;
+      border-radius: var(--radius-large);
+      transition: all 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: var(--color-izmir-light);
+      color: var(--color-izmir);
+      transform: scale(1.05);
+    }
+
+    /* Butonlar */
+    .btn {
+      display: inline-block;
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: var(--radius-large);
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-primary {
+      background-color: var(--color-izmir);
+      color: #FFFFFF;
+      box-shadow: 0 8px 22px rgba(19, 99, 223, 0.28);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-izmir-hover);
+      box-shadow: 0 12px 28px rgba(19, 99, 223, 0.38);
+    }
+
+    .btn-accent {
+      background-color: var(--color-accent);
+      color: #FFFFFF;
+      box-shadow: 0 8px 22px rgba(238, 89, 89, 0.28);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--color-accent-hover);
+      box-shadow: 0 12px 28px rgba(238, 89, 89, 0.38);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--color-text);
+      border-color: var(--color-izmir);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-izmir);
+      color: #FFFFFF;
+    }
+
+    /* Kapsayıcılar */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: var(--color-izmir-light);
+      color: var(--color-izmir);
+      font-weight: 800;
+      padding: 6px 20px;
+      border-radius: var(--radius-large);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      border: 1px solid var(--color-border);
+    }
+
+    .section-badge.badge-coral {
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      border-color: rgba(238, 89, 89, 0.25);
+    }
+
+    .section-title {
+      font-size: 2.6rem;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--color-muted);
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    /* Giriş / Hero Bölümü */
+    .hero {
+      padding: 50px 0 20px 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-tag {
+      background: #FFFFFF;
+      color: var(--color-izmir);
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: var(--radius-large);
+      font-size: 0.88rem;
+      border: 2px solid var(--color-border);
+    }
+
+    .hero-tag.tag-accent {
+      color: var(--color-accent);
+      background: #FFFFFF;
+      border-color: rgba(238, 89, 89, 0.3);
+    }
+
+    .hero-title {
+      font-size: 3.3rem;
+      line-height: 1.14;
+    }
+
+    .hero-title .title-blue {
+      color: var(--color-izmir);
+    }
+
+    .hero-title .title-coral {
+      color: var(--color-accent);
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 8px 0;
+    }
+
+    .highlight-card {
+      background: #FFFFFF;
+      padding: 16px 14px;
+      border-radius: var(--radius-large);
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      transition: transform 0.25s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .highlight-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-izmir);
+      line-height: 1.2;
+    }
+
+    .highlight-title.coral {
+      color: var(--color-accent);
+    }
+
+    .highlight-desc {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-top: 4px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cover-card {
+      background: var(--color-bg-card);
+      padding: 16px;
+      border-radius: var(--radius-large);
+      box-shadow: var(--shadow-soft);
+      border: 3px solid rgba(19, 99, 223, 0.18);
+      width: 100%;
+    }
+
+    .cover-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: calc(var(--radius-large) - 8px);
+      object-fit: cover;
+    }
+
+    /* Dalgalı Geçiş Bölücüleri */
+    .wave-container {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-container svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 70px;
+    }
+
+    /* Akademi Maskot Bölümü */
+    .mascot-section {
+      background-color: #FFFFFF;
+      padding: 70px 0;
+    }
+
+    .mascot-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-large);
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      align-items: center;
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mascot-img-wrap {
+      background: #FFFFFF;
+      border-radius: var(--radius-large);
+      padding: 24px;
+      border: 2px dashed rgba(19, 99, 223, 0.35);
+      text-align: center;
+    }
+
+    .mascot-img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .mascot-badge {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-weight: 700;
+      color: var(--color-izmir);
+      margin-top: 14px;
+      font-size: 1.15rem;
+    }
+
+    .mascot-text h2 {
+      font-size: 2.3rem;
+      margin-bottom: 16px;
+      color: var(--color-text);
+    }
+
+    .mascot-text p {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .mascot-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .mascot-pill {
+      background: #FFFFFF;
+      color: var(--color-izmir);
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: var(--radius-large);
+      border: 1px solid var(--color-border);
+      font-size: 0.95rem;
+    }
+
+    .mascot-pill.pill-coral {
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      border-color: rgba(238, 89, 89, 0.25);
+    }
+
+    /* 3-12 Yaş Grupları ve Kurslar Bölümü */
+    .courses-section {
+      padding: 80px 0;
+      background-color: var(--color-bg);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .course-card {
+      background: var(--color-bg-card);
+      border-radius: var(--radius-large);
+      padding: 22px;
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-izmir);
+    }
+
+    .card-img-wrap {
+      width: 100%;
+      height: 280px;
+      border-radius: calc(var(--radius-large) - 6px);
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .course-card:hover .card-img {
+      transform: scale(1.05);
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .card-tag {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-age {
+      font-size: 0.85rem;
+      font-weight: 800;
+      background: var(--color-izmir-light);
+      color: var(--color-izmir);
+      padding: 4px 14px;
+      border-radius: var(--radius-large);
+      border: 1px solid var(--color-border);
+    }
+
+    .card-title {
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+      color: var(--color-text);
+    }
+
+    .card-desc {
+      font-size: 1rem;
+      color: var(--color-muted);
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .course-time {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--color-muted);
+    }
+
+    .course-apply-link {
+      color: var(--color-izmir);
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .course-apply-link:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+
+    /* Pedagojik İlkeler Bölümü */
+    .values-section {
+      background: #FFFFFF;
+      padding: 70px 0;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .value-card {
+      background: var(--color-bg);
+      padding: 24px 20px;
+      border-radius: var(--radius-large);
+      border: 2px solid var(--color-border);
+      text-align: center;
+    }
+
+    .value-num {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-izmir);
+      margin-bottom: 6px;
+    }
+
+    .value-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+
+    .value-desc {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    /* Soru & Cevap Bölümü */
+    .faq-section {
+      background-color: var(--color-bg);
+      padding: 80px 0;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .question-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-large);
+      padding: 36px;
+      border: 2px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .question-header {
+      margin-bottom: 20px;
+    }
+
+    .question-number {
+      display: inline-block;
+      background-color: var(--color-izmir);
+      color: #FFFFFF;
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-weight: 700;
+      padding: 4px 16px;
+      border-radius: var(--radius-large);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .question-number.num-coral {
+      background-color: var(--color-accent);
+    }
+
+    .question-text {
+      font-size: 1.4rem;
+      color: var(--color-text);
+      line-height: 1.35;
+    }
+
+    .answer-box {
+      margin-top: 20px;
+      background: var(--color-bg);
+      border-radius: calc(var(--radius-large) - 6px);
+      padding: 20px;
+      border-left: 6px solid var(--color-izmir);
+      font-size: 1.05rem;
+      color: var(--color-muted);
+      line-height: 1.65;
+      display: none;
+    }
+
+    .answer-box.box-coral {
+      border-left-color: var(--color-accent);
+    }
+
+    .answer-box.active {
+      display: block;
+    }
+
+    .toggle-answer-btn {
+      margin-top: 24px;
+      width: 100%;
+      background-color: var(--color-text);
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 24px;
+      border-radius: var(--radius-large);
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .toggle-answer-btn:hover {
+      background-color: var(--color-izmir);
+      transform: scale(1.05);
+    }
+
+    /* Ön Kayıt & İletişim Bölümü */
+    .contact-section {
+      padding: 90px 0 70px 0;
+      background-color: #FFFFFF;
+    }
+
+    .contact-card {
+      background: var(--color-bg);
+      border-radius: var(--radius-large);
+      padding: 50px 40px;
+      border: 3px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      font-size: 1.15rem;
+      color: var(--color-muted);
+      margin-bottom: 28px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .email-display-box {
+      display: inline-block;
+      background: #FFFFFF;
+      border: 2px dashed var(--color-izmir);
+      padding: 16px 32px;
+      border-radius: var(--radius-large);
+      margin-bottom: 32px;
+    }
+
+    .email-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--color-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .email-address {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--color-izmir);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+      color: var(--color-text);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: var(--radius-large);
+      border: 2px solid var(--color-border);
+      background: #FFFFFF;
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--color-izmir);
+      box-shadow: 0 0 0 3px rgba(19, 99, 223, 0.15);
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    /* Alt Bilgi (Footer) */
+    .footer {
+      background: linear-gradient(180deg, #0B2545, #051426);
+      color: #FFFFFF;
+      padding: 44px 24px;
+      text-align: center;
+      border-top: 4px solid var(--color-izmir);
+    }
+
+    .footer .academy-title {
+      font-family: 'Baloo 2', cursive, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .footer p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* Erişilebilirlik: Hareketi Azaltma */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transform: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Duyarlı Tasarım (Mobil / Tablet) */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-tags {
+        justify-content: center;
+      }
+
+      .mascot-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .mascot-features {
+        justify-content: center;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .questions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2.4rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar {
+        padding: 12px 16px;
+      }
+
+      .brand-main {
+        font-size: 1.25rem;
+      }
+
+      .nav-links {
+        gap: 6px;
+      }
+
+      .nav-links a {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+      }
+
+      .mascot-card {
+        padding: 24px;
+      }
+
+      .contact-card {
+        padding: 32px 18px;
+      }
+
+      .email-address {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Üst Kurumsal Bilgi Çubuğu -->
+  <div class="top-banner">
+    <strong>3-12 Yaş</strong> İzmir Çocuk Dans & Bale Akademisi Yeni Dönem Erken Kayıtları Başladı!
+  </div>
+
+  <!-- Gezinti Çubuğu -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#giris" class="brand-wrap">
+        <span class="brand-main">İzmir Çocuk Dans Akademisi</span>
+        <span class="brand-sub">3 - 12 Yaş Bale & Ritim Merkezi</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#akademi">Akademi</a></li>
+        <li><a href="#kurslar">Yaş Grupları</a></li>
+        <li><a href="#sss">Soru-Cevap</a></li>
+        <li><a href="#kayit">Ön Kayıt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Giriş / Hero Bölümü -->
+  <header id="giris" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tags">
+            <span class="hero-tag">3 - 12 Yaş Özel Eğitim</span>
+            <span class="hero-tag tag-accent">Klasik Bale & Ritim Dansı</span>
+            <span class="hero-tag">İzmir Çocuk Sahnesi</span>
+          </div>
+          <h1 class="hero-title">Çocuklar İçin <span class="title-coral">Dansın Neşesi</span> ve <span class="title-blue">Mavi İzmir'in Ritmi</span>!</h1>
+          <p class="hero-description">
+            3-12 yaş grubundaki çocuklarımızın beden koordinasyonunu, duruş zarafetini ve müzikal kulağını geliştiren profesyonel pedagojik bale ve dans programı. Maskotumuz Ritim Kedisi eşliğinde her ders bir şölen!
+          </p>
+          <div class="hero-highlights">
+            <div class="highlight-card">
+              <div class="highlight-title coral">3-12 Yaş</div>
+              <div class="highlight-desc">3 Ayrı Yaş Düzeyi</div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-title">8-10 Kişi</div>
+              <div class="highlight-desc">Butik Sınıf Kontenjanı</div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-title">Yıl Sonu</div>
+              <div class="highlight-desc">İzmir Çocuk Resitali</div>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a href="#kurslar" class="btn btn-primary">Yaş Gruplarını İncele</a>
+            <a href="#kayit" class="btn btn-accent">Ücretsiz Deneme Dersi Al</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="cover-card">
+            <img 
+              src="kapak.png" 
+              onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='resimler/kapak.png';}" 
+              alt="İzmir Çocuk Dans ve Bale Akademisi - Kapak Görseli" 
+              class="cover-img"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dalgalı Geçiş: Beyaz Zemine Geçiş -->
+  <div class="wave-container">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0 C200,80 400,-30 600,45 C800,120 1000,20 1200,60 L1200,120 L0,120 Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  <!-- Maskot & Pedagojik Yaklaşım Bölümü -->
+  <section id="akademi" class="mascot-section">
+    <div class="container">
+      <div class="mascot-card">
+        <div class="mascot-img-wrap">
+          <img 
+            src="maskot.png" 
+            onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='resimler/maskot.png';}" 
+            alt="Akademi Maskotu Sevimli Çini Kedi" 
+            class="mascot-img"
+          >
+          <div class="mascot-badge">Çocukların Sevimli Rehberi: Ritim Kedisi</div>
+        </div>
+        <div class="mascot-text">
+          <div class="section-badge">Pedagojik Sanat Eğitimi</div>
+          <h2>Bale ve Dansı Severek Öğreten Çocuk Akademisi</h2>
+          <p>
+            3-12 yaş çocuk gelişiminde sanat; baskıdan uzak, neşeli ve oyun dolu bir ortamda filizlenir. Çini desenli maskotumuz Ritim Kedisi, çocuklarımızın atölyeye adım attığı ilk andan itibaren onların en yakın dans arkadaşı olur.
+          </p>
+          <p>
+            Alanında uzman eğitmenlerimiz; minik dansçılarımızın duruş sağlığını, kas gelişimini, esnekliğini ve ritim duygusunu sevgi dolu bir disiplinle adım adım inşa eder.
+          </p>
+          <div class="mascot-features">
+            <span class="mascot-pill">Çocuk Gelişimi Odaklı</span>
+            <span class="mascot-pill pill-coral">Duruş & Omurga Sağlığı</span>
+            <span class="mascot-pill">Müzikalite & Ritim Eğitimi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dalgalı Geçiş: Mavi Krem Zemine Dönüş -->
+  <div class="wave-container" style="background-color: #FFFFFF;">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,110 600,-20 900,60 C1050,100 1150,50 1200,30 L1200,120 L0,120 Z" fill="#F4F8FC"></path>
+    </svg>
+  </div>
+
+  <!-- 3-12 Yaş Grupları ve Kurslar Bölümü -->
+  <section id="kurslar" class="courses-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge badge-coral">3 - 12 Yaş Eğitim Programı</div>
+        <h2 class="section-title">Çocuklar İçin Yaş Düzeyine Göre Atölyeler</h2>
+        <p class="section-subtitle">
+          Her yaş grubunun pedagojik, anatomik ve ritmik ihtiyaçlarına göre tasarlanmış üç özel eğitim programı.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Grup 1: 3-5 Yaş -->
+        <article class="course-card">
+          <div class="card-img-wrap">
+            <img 
+              src="kart-1.png" 
+              onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='resimler/kart-1.png';}" 
+              alt="3-5 Yaş Mini Bale ve Dans Atölyesi" 
+              class="card-img"
+            >
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-tag">Mini Bale & Ritim</span>
+              <span class="card-age">3 - 5 Yaş</span>
+            </div>
+            <h3 class="card-title">Minikler Bale & Hareket</h3>
+            <p class="card-desc">
+              Kırmızı kurdeleli minik bale patikleriyle başlayan ilk adımlar! Oyun temelli bale duruşları, motor beceriler, ritim algısı ve arkadaşlık bağlarını güçlendiren neşeli dersler.
+            </p>
+            <div class="card-footer">
+              <span class="course-time">Haftada 2 Gün (45 dk)</span>
+              <a href="#kayit" class="course-apply-link">Gruba Kayıt</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grup 2: 6-8 Yaş -->
+        <article class="course-card">
+          <div class="card-img-wrap">
+            <img 
+              src="kart-2.png" 
+              onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='resimler/kart-2.png';}" 
+              alt="6-8 Yaş Klasik Bale ve Ritim Sazları Eğitimi" 
+              class="card-img"
+            >
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-tag">Klasik Bale & Müzik</span>
+              <span class="card-age">6 - 8 Yaş</span>
+            </div>
+            <h3 class="card-title">Temel Bale & Müzikalite</h3>
+            <p class="card-desc">
+              Temel bale pozisyonları, esneme, zarafet ve enstrüman tınılarıyla zenginleştirilmiş ritim eğitimi. Çocukların hem dans tekniğini hem de müzikal kulağını geliştiren program.
+            </p>
+            <div class="card-footer">
+              <span class="course-time">Haftada 2 Gün (60 dk)</span>
+              <a href="#kayit" class="course-apply-link">Gruba Kayıt</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grup 3: 9-12 Yaş -->
+        <article class="course-card">
+          <div class="card-img-wrap">
+            <img 
+              src="kart-3.png" 
+              onerror="if(!this.dataset.retry){this.dataset.retry='1';this.src='resimler/kart-3.png';}" 
+              alt="9-12 Yaş İzmir Çocuk Sahne Sanatları ve Koreografi" 
+              class="card-img"
+            >
+          </div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-tag">Sahne & Koreografi</span>
+              <span class="card-age">9 - 12 Yaş</span>
+            </div>
+            <h3 class="card-title">İzmir Çocuk Sahnesi</h3>
+            <p class="card-desc">
+              İleri seviye koreografi, grup senkronizasyonu ve sahne duruşu. Tarihi Saat Kulesi gölgesinde ve salon sahnelerinde gerçekleşen büyük yıl sonu çocuk dans resitali hazırlığı.
+            </p>
+            <div class="card-footer">
+              <span class="course-time">Haftada 3 Gün (75 dk)</span>
+              <a href="#kayit" class="course-apply-link">Gruba Kayıt</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dalgalı Geçiş: Beyaz Zemine Geçiş -->
+  <div class="wave-container">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,20 C180,95 420,-20 620,50 C820,120 1020,30 1200,60 L1200,120 L0,120 Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  <!-- Pedagojik Güvenceler (Veliler İçin) -->
+  <section class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Velilerimiz İçin Standartlarımız</div>
+        <h2 class="section-title">Neden İzmir Çocuk Dans Akademisi?</h2>
+        <p class="section-subtitle">
+          Çocuğunuzun geleceğine sanat, sağlık ve özgüven katan kurumsal eğitim anlayışımız.
+        </p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-num">8-10</div>
+          <div class="value-title">Butik Kontenjan</div>
+          <div class="value-desc">Her çocukla birebir ilgilenilen samimi ve güvenli sınıf ortamı.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">%100</div>
+          <div class="value-title">Pedagojik Formasyon</div>
+          <div class="value-desc">Çocuk psikolojisi ve yaş gelişimine hakim uzman dans eğitmenleri.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">1. Seviye</div>
+          <div class="value-title">Duruş & Omurga</div>
+          <div class="value-desc">Masa başı yorgunluğunu silen sağlıklı beden duruşu ve esneklik.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-num">Yıl Sonu</div>
+          <div class="value-title">Görkemli Resital</div>
+          <div class="value-desc">Tüm velilerimizin gururla izlediği kostümlü sahne gösterisi.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dalgalı Geçiş: Mavi Krem Zemine Dönüş -->
+  <div class="wave-container" style="background-color: #FFFFFF;">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,60 C250,-10 500,110 750,30 C950,-30 1100,70 1200,40 L1200,120 L0,120 Z" fill="#F4F8FC"></path>
+    </svg>
+  </div>
+
+  <!-- Soru & Cevap Bölümü (Veliler İçin 2 Temel Soru) -->
+  <section id="sss" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Merak Edilen Sorular</div>
+        <h2 class="section-title">Velilerimizin Sıkça Sorduğu 2 Soru</h2>
+        <p class="section-subtitle">
+          3-12 yaş eğitim sürecimiz, yaş gruplarımız ve deneme dersleri hakkında detaylı bilgiler.
+        </p>
+      </div>
+
+      <div class="questions-grid">
+        <!-- Soru 1 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number">1. Gelişim & Fayda Sorusu</span>
+            <h3 class="question-text">3-5 ve 6-8 yaşındaki çocuğum için bale ve dans eğitiminin fiziksel ve zihinsel faydaları nelerdir?</h3>
+          </div>
+          <div id="cevap-1" class="answer-box">
+            Erken yaşta bale ve ritim dansı; çocukların omurga ve kas gelişimini destekler, içe basma veya duruş bozukluklarını önler. Müzikle hareket eden çocuklarda odaklanma süresi uzar, ritim duygusu gelişir ve sahne özgüveni kazanırlar.
+          </div>
+          <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('cevap-1', this)">
+            Cevabı Gör
+          </button>
+        </div>
+
+        <!-- Soru 2 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-number num-coral">2. Kayıt & Deneme Dersi Sorusu</span>
+            <h3 class="question-text">Kayıt yaptırmadan önce çocuğumun derse katılabileceği ücretsiz bir deneme dersi var mı?</h3>
+          </div>
+          <div id="cevap-2" class="answer-box box-coral">
+            Evet! Her çocuğumuz için önceden randevu alarak katılabileceğiniz 1 saatlik ücretsiz tanışma ve seviye belirleme dersi düzenliyoruz. Eğitmenlerimiz çocuğunuzun yaş ve ritim uyumunu değerlendirerek en doğru gruba yönlendirme yapar.
+          </div>
+          <button type="button" class="toggle-answer-btn" onclick="toggleAnswer('cevap-2', this)">
+            Cevabı Gör
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dalgalı Geçiş: Beyaz Zemine Geçiş -->
+  <div class="wave-container">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,20 C220,100 450,-10 680,60 C880,120 1050,40 1200,70 L1200,120 L0,120 Z" fill="#FFFFFF"></path>
+    </svg>
+  </div>
+
+  <!-- Ön Kayıt & İletişim Bölümü -->
+  <section id="kayit" class="contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="section-badge badge-coral">Ücretsiz Deneme Dersi</div>
+        <h2>Çocuğunuz İçin Ön Kayıt Oluşturun</h2>
+        <p>
+          3-12 yaş grubundaki çocuğunuzun yaş grubuna uygun sınıfı belirlemek ve ücretsiz deneme dersine katılmak için formu doldurabilir ya da doğrudan bize e-posta yazabilirsiniz.
+        </p>
+
+        <div class="email-display-box">
+          <span class="email-label">Akademi Resmi Kayıt E-Postası</span>
+          <a href="mailto:gultenmisli@gmail.com" class="email-address">gultenmisli@gmail.com</a>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); sendMail();">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="parent_name">Veli Adı ve Soyadı</label>
+              <input type="text" id="parent_name" class="form-control" placeholder="Adınızı giriniz" required>
+            </div>
+            <div class="form-group">
+              <label for="child_name">Çocuğun Adı ve Yaşı</label>
+              <input type="text" id="child_name" class="form-control" placeholder="Örn: Deniz (5 Yaş)" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="course_group">Tercih Edilen Yaş Grubu</label>
+              <select id="course_group" class="form-control" required>
+                <option value="3-5 Yaş Minikler Bale & Hareket">3-5 Yaş: Minikler Bale & Hareket</option>
+                <option value="6-8 Yaş Temel Bale & Müzikalite">6-8 Yaş: Temel Bale & Müzikalite</option>
+                <option value="9-12 Yaş İzmir Çocuk Sahnesi">9-12 Yaş: İzmir Çocuk Sahnesi</option>
+                <option value="Ücretsiz Deneme Dersi Talebi">Ücretsiz Deneme Dersi İsteği</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="phone">İletişim Telefonu</label>
+              <input type="tel" id="phone" class="form-control" placeholder="05XX XXX XX XX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="notes">Eklemek İstediğiniz Bilgi veya Tercih Ettiğiniz Günler</label>
+            <textarea id="notes" class="form-control" placeholder="Daha önce dans/bale deneyimi var mı, hafta içi mi hafta sonu mu tercih edersiniz?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            Ön Kayıt ve Deneme Dersi Talebi Gönder
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alt Bilgi (Footer) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="academy-title">İzmir Ritim ve Çocuk Dans Akademisi</div>
+      <p>3 - 12 Yaş Çocuk Bale, Dans ve Sahne Sanatları Merkezi</p>
+      <p style="margin-top: 8px; font-size: 0.9rem; opacity: 0.85;">
+        İzmir Kordon & Sanat Stüdyoları. Geleceğin minik dansçıları için sevgiyle hazırlandı.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Soru cevap kutularını açıp kapatma fonksiyonu
+    function toggleAnswer(id, btn) {
+      const box = document.getElementById(id);
+      if (!box) return;
+      const isVisible = box.classList.contains('active');
+      if (isVisible) {
+        box.classList.remove('active');
+        btn.textContent = 'Cevabı Gör';
+      } else {
+        box.classList.add('active');
+        btn.textContent = 'Cevabı Gizle';
+      }
+    }
+
+    // Ön kayıt formu gönderme (mailto ile resmi e-posta hazırlama)
+    function sendMail() {
+      const parentName = document.getElementById('parent_name').value;
+      const childName = document.getElementById('child_name').value;
+      const courseGroup = document.getElementById('course_group').value;
+      const phone = document.getElementById('phone').value;
+      const notes = document.getElementById('notes').value;
+      
+      const fullSubject = encodeURIComponent('Çocuk Dans Ön Kayıt: ' + childName + ' - ' + courseGroup);
+      const fullBody = encodeURIComponent(
+        'Veli Adı Soyadı: ' + parentName + '\n' +
+        'Çocuk Adı ve Yaşı: ' + childName + '\n' +
+        'Tercih Edilen Grup: ' + courseGroup + '\n' +
+        'İletişim Telefonu: ' + phone + '\n\n' +
+        'Veli Notu:\n' + notes
+      );
+      
+      window.location.href = 'mailto:gultenmisli@gmail.com?subject=' + fullSubject + '&body=' + fullBody;
+    }
+  </script>
+</body>
+</html>
